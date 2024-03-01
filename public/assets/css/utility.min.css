@@ -1,3 +1,20 @@
+/* *{
+    list-style: none;
+} */
+
+
+.lora{
+    font-family: "Marcellus", serif;
+}
+.slogan{
+    font-size: 22px;
+}
+.myborder{
+    border: 1px solid #ddd;
+}
+.slogans ul{
+    margin-left: 110px;
+}
 .lqd-fade-sides:not(.carousel-container) {
     mask-image: linear-gradient(to right, transparent 0%, #000 20%, #000 80%, transparent 100%);
     -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 20%, #000 80%, transparent 100%)
@@ -3320,7 +3337,7 @@
     padding-right: 2em
 }
 .py-2em {
-    padding: 7px 0em;
+    padding: 11px 0em;
 }
 
 .pr-2\/1em,
@@ -11259,3 +11276,97 @@ input[type="file"]::file-selector-button:hover {
     opacity: 0.3;
   }
   
+.profile{text-align: end;}
+.profile-heading h1{  
+    font-size:30px !important;
+    z-index: 1;
+    font-family: "Epilogue", sans-serif;
+}
+.profile-heading {  
+    text-align: center;
+}
+.profile-head{
+    padding-left: 110px;
+    padding-right: 110px;
+
+}
+  .profile img{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+.profile-head{align-items: center;}
+.divide{
+    padding-right: 20px;
+}
+.title-shape {
+    position: absolute;
+    left: 47%;
+    z-index: -1;
+    top:-10px;
+}
+.goal{
+    margin-top: 20px;
+    margin-bottom: 20px;
+   text-align: center   ;
+}
+.float{
+    position: absolute;
+    left:20%;
+    top: 40%;
+}
+
+.epi-family{   font-family: "Epilogue", sans-serif !important;}
+.marks-heading{
+    text-transform: none;
+    font-size: 20px;
+    color: white !important;
+}
+.marks-heading2{
+    text-transform: none;
+    font-size: 20px;
+    font-weight: 700;
+    color: #333333 !important;
+}
+.goal-table tbody tr{
+    color: #333333;
+    background-color: #ebf3f9 !important;
+}
+
+
+
+.goal-table>tbody>tr{border: 1px solid #ddd !important;}
+/* .goal-table>thead>tr{border: 1px solid #ddd !important;} */
+
+.goal-table tr th:nth-child(1){border-top-left-radius: 5px;}
+.goal-table tr th:last-child{border-top-right-radius: 5px;}
+.goal-table tr td:nth-child(1){border-bottom-left-radius: 5px;}
+.goal-table tr td:last-child{border-bottom-right-radius: 5px;}
+
+.ptb-50{
+    border: 1px solid #ddd;
+    padding: 50px 0px;}
+.goal-table{
+    text-align: center;
+    border-radius: 10px;
+    width: 80%;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    margin-bottom: 20px;
+}
+
+@media (max-width:768px) {
+    .float{
+        display: none;
+    }
+    .profile-head{padding: 50px 0px;}
+    .slogans ul{margin: 10px;}
+    .slogan{font-size: 18px;}
+    .profile{
+        margin-top: 20px;
+        text-align: center;}
+    .profile-table{
+        margin:auto;
+        width: 500px;}
+    
+}

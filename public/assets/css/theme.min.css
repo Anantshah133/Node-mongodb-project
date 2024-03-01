@@ -1426,9 +1426,9 @@ table {
     color: #333
 }
 
-table tr {
+/* table tr {
     border-bottom: 1px solid #dedede
-}
+} */
 
 table td,
 table th {
@@ -1444,6 +1444,7 @@ table th a {
 table thead th {
     padding-top: .8em;
     padding-bottom: .8em;
+    padding-left: .8em;
     font-size: .8em;
     text-transform: uppercase;
     letter-spacing: .1em
@@ -1452,10 +1453,10 @@ table thead th {
 table tbody th {
     font-weight: 400
 }
-
-table tbody tr:nth-child(odd) {
+/* .profile-table tbody tr td{padding: 20px 0px;} */
+/* table tbody tr:nth-child(odd) {
     background-color: #f7f7f7
-}
+} */
 
 pre {
     margin-bottom: 1.5em
@@ -1517,7 +1518,7 @@ h6 {
 
 .h1,
 h1 {
-    font-family: var(--lqd-h1-font-family, var(--lqd-heading-font-family));
+    /* font-family: var(--lqd-h1-font-family, var(--lqd-heading-font-family)); */
     font-size: var(--lqd-h1-font-size, var(--lqd-heading-font-size));
     line-height: var(--lqd-h1-line-height, var(--lqd-heading-line-height));
     font-weight: var(--lqd-h1-font-weight, var(--lqd-heading-font-weight));
@@ -1528,7 +1529,7 @@ h1 {
 
 .h2,
 h2 {
-    font-family: var(--lqd-h2-font-family, var(--lqd-heading-font-family));
+    /* font-family: var(--lqd-h2-font-family, var(--lqd-heading-font-family)); */
     font-size: var(--lqd-h2-font-size, var(--lqd-heading-font-size));
     line-height: var(--lqd-h2-line-height, var(--lqd-heading-line-height));
     font-weight: var(--lqd-h2-font-weight, var(--lqd-heading-font-weight));
@@ -1539,7 +1540,7 @@ h2 {
 
 .h3,
 h3 {
-    font-family: var(--lqd-h3-font-family, var(--lqd-heading-font-family));
+    /* font-family: var(--lqd-h3-font-family, var(--lqd-heading-font-family)); */
     font-size: var(--lqd-h3-font-size, var(--lqd-heading-font-size));
     line-height: var(--lqd-h3-line-height, var(--lqd-heading-line-height));
     font-weight: var(--lqd-h3-font-weight, var(--lqd-heading-font-weight));
@@ -1550,7 +1551,7 @@ h3 {
 
 .h4,
 h4 {
-    font-family: var(--lqd-h4-font-family, var(--lqd-heading-font-family));
+    /* font-family: var(--lqd-h4-font-family, var(--lqd-heading-font-family)); */
     font-size: var(--lqd-h4-font-size, var(--lqd-heading-font-size));
     line-height: var(--lqd-h4-line-height, var(--lqd-heading-line-height));
     font-weight: var(--lqd-h4-font-weight, var(--lqd-heading-font-weight));
@@ -1561,7 +1562,7 @@ h4 {
 
 .h5,
 h5 {
-    font-family: var(--lqd-h5-font-family, var(--lqd-heading-font-family));
+    /* font-family: var(--lqd-h5-font-family, var(--lqd-heading-font-family)); */
     font-size: var(--lqd-h5-font-size, var(--lqd-heading-font-size));
     line-height: var(--lqd-h5-line-height, var(--lqd-heading-line-height));
     font-weight: var(--lqd-h5-font-weight, var(--lqd-heading-font-weight));
@@ -1572,7 +1573,7 @@ h5 {
 
 .h6,
 h6 {
-    font-family: var(--lqd-h6-font-family, var(--lqd-heading-font-family));
+    /* font-family: var(--lqd-h6-font-family, var(--lqd-heading-font-family)); */
     font-size: var(--lqd-h6-font-size, var(--lqd-heading-font-size));
     line-height: var(--lqd-h6-line-height, var(--lqd-heading-line-height));
     font-weight: var(--lqd-h6-font-weight, var(--lqd-heading-font-weight));
@@ -6778,6 +6779,9 @@ style+.ld-module-sd>.ld-module-dropdown:last-child {
 
 .wp-calendar-table thead {
     background-color: #f2f2f2
+}
+.goal-table thead{
+    background-color: #428bca
 }
 
 .wp-calendar-table thead th {
@@ -28431,6 +28435,7 @@ nav.post-nav .nav-next .nav-subtitle svg {
     justify-content: center;
     font: normal 1em/1 lqd-essentials
 }
+
 
 .optional{
     font-size: 14px;

@@ -18,12 +18,18 @@ app.get('/', (req, res) => {
 app.get('/marksInfo', (req, res) => {
     res.render("marksInfo.ejs");
 })
+app.get('/table-marks', (req, res) => {
+    res.render("table.ejs");
+})
+app.get('/student-card', (req, res) => {
+    res.render("card.ejs");
+})
 
 app.post('/goNext', async (req, res) => {
     try {
         let result = await insertData(req.body);
         if(result){
-            res.redirect('/marksInfo');
+            res.redirect('/table-marks');
         }
     } catch (error) {
         console.log(`Error while inserting data : ${error}`);
