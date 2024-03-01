@@ -7,6 +7,9 @@ const studentSchema = new mongoose.Schema({
     studentSchool: {
         type: String,
     },
+    studentGender: {
+        type: String,
+    },
     studentContact: {
         type: String,
     },

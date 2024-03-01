@@ -68,6 +68,7 @@
                                                                     class="optional">(વિદ્યાર્થીનું પૂરું
                                                                     નામ)</span></label>
                                                             <input type="text" name="studentName" value="" size="30"
+                                                                id="name"
                                                                 class="lqd-cf-form-control border-1 border-black-10 rounded-4 px-2em text-16 text-slate-700"
                                                                 aria-required="true" aria-invalid="false"
                                                                 placeholder="Neel Sombhai Patel" required></span>
@@ -77,6 +78,7 @@
                                                             <label for="name">School Name <span
                                                                     class="optional">(શાળાનું નામ)</span></label>
                                                             <input type="text" name="studentSchool" value="" size="30"
+                                                                id="school"
                                                                 class="lqd-cf-form-control border-1 border-black-10 rounded-4 px-2em text-16 text-slate-700"
                                                                 aria-required="true" aria-invalid="false"
                                                                 placeholder="Sanskar Bharti Vidhyalaya" required></span>
@@ -87,7 +89,7 @@
                                                                     class="optional">(વિદ્યાર્થી સંપર્ક
                                                                     નંબર)</span></label>
                                                             <input type="tel" name="studentContact" value="" size="30"
-                                                                maxlength="10"
+                                                                maxlength="10" id="phone"
                                                                 onkeypress="return event.charCode >= 48 && event.charCode <= 57"
                                                                 class="lqd-cf-form-control border-1 border-black-10 rounded-4 px-2em text-16 text-slate-700"
                                                                 aria-required="true" aria-invalid="false"
@@ -97,7 +99,7 @@
                                                             <label for="ContactNumber">Father Contact Number <span
                                                                     class="optional">(પિતાનો સંપર્ક નંબર)</span></label>
                                                             <input type="tel" name="stdFatherContact" value="" size="30"
-                                                                maxlength="10"
+                                                                maxlength="10" id="fatherNum"
                                                                 onkeypress="return event.charCode >= 48 && event.charCode <= 57"
                                                                 class="lqd-cf-form-control border-1 border-black-10 rounded-4 px-2em text-16 text-slate-700"
                                                                 aria-required="true" aria-invalid="false"
@@ -107,13 +109,32 @@
                                                             <label for="ContactNumber">Upload Photo / Selfie</label>
                                                             <div
                                                                 class="qd-cf-form-control border-1 border-black-10 rounded-4 py-2em">
-                                                                <input type="file" capture="environment"
+                                                                <input type="file" capture="environment" id="stImg"
                                                                     accept="image/*" name="studentImg" value=""
                                                                     class="file-upload  lqd-cf-form-control
                                                                  border-1 border-black-10 rounded-4 px-2em text-16 text-slate-700" aria-required="true"
                                                                     aria-invalid="false" required>
                                                             </div>
                                                         </span></div>
+                                                    <div class="col col-md-6 col-12 py-0 px-15">
+                                                        <span class="lqd-form-control-wrap text">
+                                                            <label for="">Student Gender <span class="optional">(વિદ્યાર્થી લિંગ)</span></label>
+                                                            <div class="flex items-center mt-10">
+                                                                <div class="mr-15">
+                                                                    <input type="radio" value="Science" id="male"
+                                                                        class="mr-5" name="studentGender">
+                                                                    <label for="male"
+                                                                        class="cursor-pointer">Male</label>
+                                                                </div>
+                                                                <div>
+                                                                    <input type="radio" value="Commerce" id="female"
+                                                                        class="mr-5" name="studentGender">
+                                                                    <label for="female"
+                                                                        class="cursor-pointer">Female</label>
+                                                                </div>
+                                                            </div>
+                                                        </span>
+                                                    </div>
                                                     <div class="col col-md-6 col-12 py-0 px-15">
                                                         <span class="lqd-form-control-wrap text">
                                                             <label for="name">Student Standard <span
@@ -132,17 +153,21 @@
                                                     <div class="col col-md-6 col-12 py-0 px-15 hidden" id="stream">
                                                         <span class="lqd-form-control-wrap text">
                                                             <label for="">Student Stream <span class="optional">(શિક્ષણ
-                                                                    પ્રવાહ)</span></label>
-                                                            <div>
-                                                                <div>
-                                                                    <input type="radio" value="Science" id="sci" class="mr-5" name="stream">
-                                                                    <label for="sci" class="cursor-pointer">Science</label>
-                                                                </div>
-                                                                <div>
-                                                                    <input type="radio" value="Commerce" id="com" class="mr-5" name="stream">
-                                                                    <label for="com" class="cursor-pointer">Commerce</label>
-                                                                </div>
+                                                                પ્રવાહ)</span></label>
+                                                        <div class="flex items-center mt-10">
+                                                            <div class="mr-15">
+                                                                <input type="radio" value="Science" id="sci"
+                                                                    class="mr-5" name="stream">
+                                                                <label for="sci"
+                                                                    class="cursor-pointer">Science</label>
                                                             </div>
+                                                            <div>
+                                                                <input type="radio" value="Commerce" id="com"
+                                                                    class="mr-5" name="stream">
+                                                                <label for="com"
+                                                                    class="cursor-pointer">Commerce</label>
+                                                            </div>
+                                                        </div>
                                                         </span>
                                                     </div>
                                                     <div class="col col-12 py-0 px-15 mt-25">
@@ -162,12 +187,24 @@
             </div>
         </main>
     </div>
-    
+
     <script src="assets/vendors/jquery.min.js"></script>
     <script src="assets/vendors/jquery-ui/jquery-ui.min.js"></script>
     <script src="assets/vendors/bootstrap/js/bootstrap.min.js"></script>
     <script src="./assets/js/main.js"></script>
     <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const studentForm = document.getElementById("studentForm");
+            studentForm.addEventListener("submit", function (event) {
+                const isValid = studentForm.checkValidity();
+                if (isValid) {
+                    localStorage.setItem("nextPageFlag", 'true');
+                } else {
+                    event.preventDefault();
+                }
+            })
+        })
+
         function getStream(std, hiddenRadio) {
             const radioDiv = document.getElementById(hiddenRadio);
             const sciRadio = document.getElementById('sci');
