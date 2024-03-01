@@ -1,35 +1,15 @@
-const { MongoClient } = require("mongodb");
-const url = "mongodb://localhost:27017/";
-const client = new MongoClient(url);
-const dbName = "all-data";
-let data = { name: 'Test' };
+const { connectDB } = require("./src/config/db");
+const { insertData } = require("./src/crud/operations");
+connectDB();
 
-async function connectDB() {
-    await client.connect();
-    const db = client.db(dbName);
-    const collection = db.collection("student-data");
-    return collection;
+let data = {
+    studentName: "Heet",
+    studentSchool: "XYZ",
+    studentContact: "1234567890",
+    stdFatherContact: "0987654321",
+    studentImg: "xyz.jpg",
+    studentStd: "12",
+    stream: "commerce",
 }
 
-async function getData() {
-    let collection = await connectDB();
-    var result = await collection.find({}).toArray();
-}
-
-async function insertData(data) {
-    let collection = await connectDB();
-    try {
-        var result = await collection.insertOne(data);
-        return result.acknowledged == true ? result.insertedId : null;
-    } catch (error) {
-        if (error instanceof MongoServerError) {
-            console.log(`Error worth logging: ${error}`);
-        }
-        throw error;
-    }
-}
-
-module.exports = {
-    getData,
-    insertData
-};
+insertData(data);
