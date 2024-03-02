@@ -60,7 +60,7 @@
                                                 <p role="status" aria-live="polite" aria-atomic="true"></p>
                                             </div>
                                             <form action="/goNext" method="post" id="studentForm"
-                                                class="lqd-cf-form init">
+                                                class="lqd-cf-form init" enctype="multipart/form-data">
                                                 <div class="row -mx-15">
                                                     <div class="col col-md-6 col-12 py-0 px-15"><span
                                                             class="lqd-form-control-wrap text">
@@ -76,8 +76,7 @@
                                                             <label for="name">School Name <span
                                                                     class="optional">(શાળાનું નામ)</span></label>
                                                             <input type="text" name="studentSchool" size="30"
-                                                                id="school"
-                                                                class="lqd-cf-form-control border-1 border-black-10 rounded-4 px-2em text-16 text-slate-700"
+                                                                id="school" class="lqd-cf-form-control border-1 border-black-10 rounded-4 px-2em text-16 text-slate-700"
                                                                 aria-required="true" aria-invalid="false"
                                                                 placeholder="Sanskar Bharti Vidhyalaya" required></span>
                                                     </div>
@@ -191,6 +190,13 @@
     <script src="assets/vendors/bootstrap/js/bootstrap.min.js"></script>
     <script src="./assets/js/main.js"></script>
     <script>
+        // let studentData = localStorage.getItem("studentData") || null;
+        // let studentMarks = localStorage.getItem("studentMarks") || null;
+
+        // if(studentData || studentMarks){
+        //     localStorage.removeItem("studentData");
+        //     localStorage.removeItem("studentMarks");
+        // }
         document.addEventListener("DOMContentLoaded", function () {
             const studentForm = document.getElementById("studentForm");
             const name = document.getElementById("stdName");
@@ -199,6 +205,7 @@
             const sciRadio = document.getElementById('sci');
             const comRadio = document.getElementById('com');
             const studentStd = document.getElementById("studentStd");
+            const school = document.getElementById("school");
             
             studentForm.addEventListener("submit", function (event) {
                 const isValid = studentForm.checkValidity();
@@ -216,6 +223,7 @@
                         gender: stuGender,
                         std: studentStd.value,
                         stream: stream,
+                        school: school.value
                     }
                     localStorage.setItem("nextPageFlag", 'true');
                     localStorage.setItem("studentData", JSON.stringify(studentObj));

@@ -4,28 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta property="og:image" content="assets/images/common/og-image.jpg">
-    <link rel="stylesheet" href="assets/vendors/liquid-icon/lqd-essentials/lqd-essentials.min.css">
+    <!-- <meta property="og:image" content="assets/images/common/og-image.jpg"> -->
+    <!-- <link rel="stylesheet" href="assets/vendors/liquid-icon/lqd-essentials/lqd-essentials.min.css"> -->
     <link rel="stylesheet" href="assets/css/theme.min.css">
     <link rel="stylesheet" href="assets/css/utility.min.css">
     <link rel="stylesheet" href="assets/css/demo/start-hub-1/base.css">
     <link rel="stylesheet" href="assets/css/demo/start-hub-1/start-hub-1-contact.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
     <link
         href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&amp;family=Nunito:wght@400;600;700&amp;family=Roboto&amp;display=swap"
         rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400..700;1,400..700&family=Marcellus&family=Protest+Revolution&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400..700;1,400..700&family=Marcellus&family=Protest+Revolution&display=swap"
+        rel="stylesheet">
     <title>Student Goal-Form</title>
 </head>
 
 <body data-lqd-cc="true" data-mobile-nav-breakpoint="1199" data-mobile-nav-style="minimal" data-mobile-nav-scheme="gray"
     data-mobile-nav-trigger-alignment="right" data-mobile-header-scheme="custom" data-mobile-logo-alignment="default"
-    data-overlay-onmobile="true"    >
+    data-overlay-onmobile="true">
     <div id="wrap">
         <div class="container border border-2 mt-80 relative  bg-white ptb-50 rounded-10 transition-all shadow-lg">
-            <div class="float">
+            <!-- <div class="float">
                 <img src="./assets/images/floating-1.png" alt="" class="img-fluid">
-            </div>
+            </div> -->
             <div class="row">
                 <div class=" col-12  mt-25 ">
                     <div class="profile-heading">
@@ -47,61 +49,40 @@
                             <tbody>
                                 <tr>
                                     <td class="font-secondary">Name </td>
-                                    <td><span class="divide">:</span>Neel Sambhai Patel</td>
+                                    <td><span class="divide">:</span> <span id="nameSpan"></span></td>
                                 </tr>
                                 <tr>
                                     <td class="font-secondary">School Name </td>
-                                    <td><span class="divide">:</span>Sanskar Bharti Vidhyalaya</td>
+                                    <td><span class="divide">:</span> <span id="schoolSpan"></span></td>
                                 </tr>
                                 <tr>
                                     <td class="font-secondary">Standard</td>
-                                    <td><span class="divide">:</span>12th Science</td>
+                                    <td><span class="divide">:</span> <span id="stdSpan"></span></td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                     <div class="col-12 col-md-6">
                         <div class="profile">
-                            <img src="./assets/images/profile photo.png" alt="">
+                            <!-- <img src="./assets/images/" alt="Image not found"> -->
                         </div>
                     </div>
                 </div>
-                <div class="col-12 d-flex flex-wrap justify-center flex-column ">
+                <div class="col-12 d-flex flex-wrap justify-center flex-column">
                     <div class="heading col-12">
                         <h2 class="goal">My Goal</h2>
                     </div>
-                        <table class="goal-table">
-                            <thead>
-                                <tr>
-                                    <th class="border-0"><span class="epi-family marks-heading">Subject</span></th>
-                                    <th class="border-0"><span class="epi-family marks-heading">Marks</span></th>
-                                    <!-- <th><span class="epi-family marks-heading">Maths </span></th>
-                                    <th><span class="epi-family marks-heading">Accounting</span></th>  
-                                    <th><span class="epi-family marks-heading">Biology</span></th>  
-                                    <th><span class="epi-family marks-heading">Physics</span></th>  
-                                    <th><span class="epi-family marks-heading">Chemistry</span></th>  
-                                    <th><span class="epi-family marks-heading">Economics  </span></th>   -->
-                                </tr>
-                            </thead>
-                            <tbody class="border border-1">
-                                <tr class="border border-1">
-                                    <td class="myborder"><span class="epi-family marks-heading2 ">Maths  </span></td>
-                                    <td class="myborder"><span class="epi-family marks-heading2 ">99  </span></td>
-                                </tr>
-                                <tr class="border border-1">
-                                    <td class="myborder"><span class="epi-family marks-heading2 ">Biology  </span></td>
-                                    <td class="myborder"><span class="epi-family marks-heading2 ">99  </span></td>
-                                </tr>
-                                <tr class="border border-1">
-                                    <td class="myborder"><span class="epi-family marks-heading2 ">Biology  </span></td>
-                                    <td class="myborder"><span class="epi-family marks-heading2 ">99  </span></td>
-                                </tr>
-                                <tr class="border border-1">
-                                    <td class="myborder"><span class="epi-family marks-heading2 ">Economics  </span></td>
-                                    <td class="myborder"><span class="epi-family marks-heading2 ">99  </span></td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    <table class="goal-table" id="goal-table">
+                        <thead>
+                            <tr>
+                                <th class="border-0"><span class="epi-family marks-heading">Subject</span></th>
+                                <th class="border-0"><span class="epi-family marks-heading">Marks</span></th>
+                            </tr>
+                        </thead>
+                        <tbody class="border border-1">
+                            
+                        </tbody>
+                    </table>
                 </div>
                 <div class="col-12 d-flex flex-wrap flex-column ">
                     <div class="heading col-12">
@@ -109,24 +90,60 @@
                     </div>
                     <div class="slogans">
                         <ul>
-                            <li ><p class="lora slogan">“Believe you can and you're halfway there.”</p></li>
-                            <li ><p class="lora slogan">The future belongs to those who believe in the beauty of their dreams.”</p></li>
-                            <li ><p class="lora slogan">“Everything in the universe is within you. Ask all from yourself.”</p></li>
+                            <li>
+                                <p class="lora slogan">“Believe you can and you're halfway there.”</p>
+                            </li>
+                            <li>
+                                <p class="lora slogan">The future belongs to those who believe in the beauty of their
+                                    dreams.”</p>
+                            </li>
+                            <li>
+                                <p class="lora slogan">“Everything in the universe is within you. Ask all from
+                                    yourself.”</p>
+                            </li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <!-- <script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script> -->
     <script src="assets/vendors/jquery.min.js"></script>
     <script src="assets/vendors/jquery-ui/jquery-ui.min.js"></script>
     <script src="assets/vendors/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/theme.min.js"></script>
-    <script src="assets/js/liquid-ajax-contact-form.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const table = document.getElementById("goal-table");
+            const tbody = table.querySelector("tbody");
+            const studentData = JSON.parse(localStorage.getItem("studentData")) || null;
+            const studentMarks = JSON.parse(localStorage.getItem("studentMarks")) || null;
+
+            // console.log(studentMarks)
+            if (studentData && studentMarks) {
+                let nameSpan = document.getElementById("nameSpan");
+                let stdSpan = document.getElementById("stdSpan");
+                let schoolSpan = document.getElementById("schoolSpan");
+
+                nameSpan.innerHTML = studentData.name;
+                stdSpan.innerHTML = `${studentData.std}th ${studentData.stream}`;
+                schoolSpan.innerHTML = studentData.school;
+
+                let content = "";
+                studentMarks.forEach((item, idx) => {
+                    content += 
+                    `<tr class="border border-1">
+                        <td class="myborder">
+                            <span class="epi-family marks-heading2">${item.subject}</span>
+                        </td>
+                        <td class="myborder">
+                            <span class="epi-family marks-heading2">${item.marks}</span>
+                        </td>
+                    </tr>`
+                })
+                tbody.innerHTML = content;
+            }
+        })
+    </script>
 </body>
 
 </html>
-
-git config --global user.email "you@example.com"
-git config --global user.name "Your Name"
