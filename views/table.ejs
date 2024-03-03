@@ -109,6 +109,8 @@
         }
 
         document.addEventListener("DOMContentLoaded", function () {
+            const studentImg = '<%= studentImg %>';
+            localStorage.setItem("stdImg", studentImg);
             const studentData = JSON.parse(localStorage.getItem("studentData")) || null;
             const form = document.querySelector("form");
             let submit = document.getElementById("submit");
@@ -116,7 +118,7 @@
             let mainFormDiv = document.getElementById("mainFormDiv");
             let data = null;
 
-            if (studentData) {
+            if (studentData && studentImg) {
                 submit.classList.remove("hidden");
                 title.classList.remove("hidden");
 

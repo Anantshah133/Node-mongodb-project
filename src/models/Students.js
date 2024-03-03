@@ -20,7 +20,7 @@ const studentSchema = new mongoose.Schema({
         type: String,
     },
     studentStd: {
-        type: Number,
+        type: String,
     },
     stream: {
         type: String,

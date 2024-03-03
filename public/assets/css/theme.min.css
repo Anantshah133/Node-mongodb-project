@@ -6783,6 +6783,9 @@ style+.ld-module-sd>.ld-module-dropdown:last-child {
 .goal-table thead{
     background-color: #428bca
 }
+.goal-table tfoot{
+    background-color: #428bca
+}
 
 .wp-calendar-table thead th {
     font-size: 1em;

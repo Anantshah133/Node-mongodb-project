@@ -11288,13 +11288,19 @@ input[type="file"]::file-selector-button:hover {
 .profile-head{
     padding-left: 110px;
     padding-right: 110px;
-
+}
+.down-btn{
+    width: 400px;
+    padding: 10px;
+    background-color: #104662;
+    color: white;
 }
   .profile img{
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     overflow: hidden;
+    object-fit: cover;
   }
 .profile-head{align-items: center;}
 .divide{

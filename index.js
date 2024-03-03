@@ -22,7 +22,8 @@ app.get('/marksInfo', (req, res) => {
 })
 
 app.get('/table-marks', (req, res) => {
-    res.render("table.ejs");
+    const studentImg = req.query.stdImg;
+    res.render("table.ejs", {studentImg});
 })
 
 app.get('/student-card', (req, res) => {
@@ -37,7 +38,7 @@ app.post('/goNext', upload.single("studentImg"), async (req, res) => {
     try {
         let result = await insertData({...req.body, studentImg: req.file.filename});
         if(result){
-            res.redirect('/table-marks');
+            res.redirect(`/table-marks?stdImg=${result.studentImg}`);
         }
     } catch (error) {
         console.log(`Error while inserting data : ${error}`);

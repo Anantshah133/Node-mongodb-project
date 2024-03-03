@@ -1,16 +1,15 @@
 const { Students } = require("../models/Students")
 
 const insertData = async (data) => {
-    if(data.studentStd == 10){
+    if (data.studentStd == 10) {
         data.stream = "";
     }
     try {
         const newStudent = new Students(data);
         var result = await newStudent.save();
-        console.log("Data inserted ", result);
-        return true;
+        return result || null;
     } catch (err) {
-        console.log(err);
+        console.log("Error while inserting data : " + err);
     }
 }
 
